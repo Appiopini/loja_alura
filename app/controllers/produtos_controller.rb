@@ -13,9 +13,8 @@ class ProdutosController < ApplicationController
 
      def busca
           @nome = params[:nome]
-          @produto.where "nome_like?", "#{@nome}"
+          @produtos = Produto.where "nome like ?", "%#{@nome}%"
      end
-     
      
      def destroy
           id = params[:id]
