@@ -21,7 +21,7 @@
           <div class="col-sm-2">
                <div class="form-group">
                     <%= form.label :preco %>
-                    <%= form.number_field :preco, step:0.01,required: true, class:"form-crontrol" %>
+                    <%= form.number_field :preco, step:0.01, required: true, class:"form-control" %>
                </div>
           </div>
      </div>
@@ -30,7 +30,8 @@
           <div class="col-sm-8">
                <div class="form-group">
                     <%= form.label :quantidade %>
-                    <%= form.number_field :quantidade, required: true, class:"form-crontrol" %>
+                    <%= form.number_field :quantidade, oninput:"this.value = this.value.replace(/[ˆ0-9]/g, '')", 
+                    required: true, class:"form-control" %>
                </div>
           </div>
      </div>
